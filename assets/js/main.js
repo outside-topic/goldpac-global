@@ -65,6 +65,21 @@ function initGlobalClocks() {
     if (khi) khi.textContent = formatTime('Asia/Karachi');
     if (dac) dac.textContent = formatTime('Asia/Dhaka');
     if (sin) sin.textContent = formatTime('Asia/Singapore');
+
+    // Live Classroom Board (One classroom, six time zones)
+    const bDac = document.getElementById('board-tz-dhaka');
+    const bDxb = document.getElementById('board-tz-dubai');
+    const bLos = document.getElementById('board-tz-lagos');
+    const bLdn = document.getElementById('board-tz-london');
+    const bKl  = document.getElementById('board-tz-kl');
+    const bTor = document.getElementById('board-tz-toronto');
+
+    if (bDac) bDac.textContent = formatTime('Asia/Dhaka');
+    if (bDxb) bDxb.textContent = formatTime('Asia/Dubai');
+    if (bLos) bLos.textContent = formatTime('Africa/Lagos');
+    if (bLdn) bLdn.textContent = formatTime('Europe/London');
+    if (bKl)  bKl.textContent  = formatTime('Asia/Kuala_Lumpur');
+    if (bTor) bTor.textContent = formatTime('America/Toronto');
   }
 
   updateClocks();
